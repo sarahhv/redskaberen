@@ -1,0 +1,14 @@
+ :root {
+    /* Default colors */
+    --color-malachite: rgb(14,177,89);
+    --color-pixie-green: #aed2ab;
+    --color-willow-brook: #dcecdc;
+  
+    /* Typography */
+    --base-font-family: 'Open sans', 'Calibri', 'sans-serif';
+    --base-font-size: 1em;
+    --base-font-light-weight: 300;
+    --base-font-regular-weight: 500;
+    --heading-font-weight: 700;
+  }
+  
