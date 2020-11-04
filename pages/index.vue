@@ -6,4 +6,9 @@
 
 <script></script>
 
-<style></style>
+<style>
+body {
+  background: url(../assets/img/stripes.png) var(--color-malachite) no-repeat;
+  background-position: top;
+}
+</style>

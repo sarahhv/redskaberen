@@ -7,10 +7,6 @@ export const mutations = {
   SET_Program(state, program) {
     state.program = program;
   },
-
-  /*   addNewReg(state, payload) {
-    state.program.push(payload);
-  }, */
 };
 
 export const actions = {
@@ -23,9 +19,4 @@ export const actions = {
         commit('SET_Program', program);
       });
   },
-
-  /*   handleReg(context, payload) {
-    console.log(payload);
-    context.commit('addNewReg', payload);
-  }, */
 };
