@@ -6,9 +6,10 @@
   
     /* Typography */
     --base-font-family: 'Open sans', 'Calibri', 'sans-serif';
-    --base-font-size: 1em;
+    --base-font-size: 1.2em;
     --base-font-light-weight: 300;
     --base-font-regular-weight: 500;
     --heading-font-weight: 700;
+    --heading-font-size: 2em;
   }
   

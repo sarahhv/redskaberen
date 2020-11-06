@@ -10,3 +10,8 @@ body {
     font-size: var(--base-font-size);
     font-weight: var(--base-font-weight-light);
 }
+
+h1 {
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+}

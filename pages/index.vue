@@ -7,8 +7,9 @@
 <script></script>
 
 <style>
-body {
+.app-content {
   background: url(../assets/img/stripes.png) var(--color-malachite) no-repeat;
-  background-position: top;
+  background-attachment: fixed;
+  padding: 3%;
 }
 </style>
