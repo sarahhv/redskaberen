@@ -1,9 +1,13 @@
 <template>
-  <section class="lineup-content">
+  <main class="lineup-content">
     <Lineup />
-  </section>
+  </main>
 </template>
 
 <script></script>
 
-<style></style>
+<style>
+.lineup-content {
+  height: 100vh;
+}
+</style>

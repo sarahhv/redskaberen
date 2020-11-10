@@ -11,6 +11,18 @@ body {
     font-weight: var(--base-font-weight-light);
 }
 
+main {
+    background: url(/_nuxt/assets/img/stripes.png) var(--color-malachite) no-repeat;
+    background-attachment: fixed;
+    background-size: 125%;
+    padding: 2vh 3vw;
+}
+
+section {
+    width: 80vw;
+    margin: auto;
+}
+
 h1 {
     font-size: var(--heading-font-size);
     font-weight: var(--heading-font-weight);
