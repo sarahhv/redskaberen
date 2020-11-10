@@ -8,11 +8,11 @@
 body {
     font-family: var(--base-font-family);
     font-size: var(--base-font-size);
-    font-weight: var(--base-font-weight-light);
+    font-weight: var(--base-font-light-weight);
 }
 
 main {
-    background: url(/_nuxt/assets/img/stripes.png) var(--color-malachite) no-repeat;
+    background: url('/_nuxt/assets/img/stripes.png') var(--color-malachite) no-repeat;
     background-attachment: fixed;
     background-size: 125%;
     padding: 2vh 3vw;

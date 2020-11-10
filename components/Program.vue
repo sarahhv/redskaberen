@@ -37,8 +37,6 @@ export default {
 
 <style scoped>
 .program-container {
-  width: 80vw;
-  margin: auto;
   text-align: left;
 }
 

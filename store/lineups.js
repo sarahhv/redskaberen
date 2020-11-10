@@ -3,7 +3,7 @@ export const state = () => ({
     {
       id: 0,
       programId: 4,
-      img: 'https://docplayer.dk/docs-images/93/112665108/images/22-0.jpg',
+      img: '/_nuxt/assets/img/lineupOne.png',
     },
     {
       id: 1,
