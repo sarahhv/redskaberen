@@ -106,6 +106,7 @@ export const state = () => ({
       time: '12:05',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Aarhus ShowTeam Spireholdet',
       instructors: 'Maria, Mathilde, Kaya, Mathilde og Sofie',
+      lineupImg: 'one',
     },
     {
       id: 12,
@@ -114,6 +115,7 @@ export const state = () => ({
       time: '12:13',
       team: 'Hinnerup Gymnastiksamvirke - Rytmepiger 3.-6. kl. og Dans og rytmisk gymnastik for piger 4.-8. kl.',
       instructors: 'Cecilie, Sarah, Rosa og Astrid',
+      lineupImg: 'one',
     },
     {
       id: 13,

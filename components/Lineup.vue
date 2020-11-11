@@ -7,8 +7,8 @@
       <div v-if="$route.params.id == pl.id" class="lineup-container__lineup">
         <h1 class="lineup-container__lineup__title">Redskabsopstilling for</h1>
         <!-- The teamname of the clicked team from the program -->
-        <p class="lineup-container__lineup__team-name">{{ pl.team }}</p>
-        <p>{{ pl.time }}</p>
+        <p class="lineup-container__lineup__program-details">{{ pl.team }}</p>
+        <p class="lineup-container__lineup__program-details">{{ pl.time }}</p>
         <!-- Image of the lineup -->
         <img :src="require(`../assets/img/${pl.lineupImg}.png`)" :alt="'Lineup' + pl.team" class="lineup-container__lineup__img" />
       </div>
@@ -40,8 +40,8 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    &__team-name {
-      background: white;
+    &__program-details {
+      background: #ffffffcc;
       display: inline-flex;
       margin: 0 auto;
     }
