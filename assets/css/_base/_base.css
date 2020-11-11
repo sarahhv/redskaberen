@@ -8,7 +8,7 @@
 body {
     font-family: var(--base-font-family);
     font-size: var(--base-font-size);
-    font-weight: var(--base-font-light-weight);
+    font-weight: var(--base-font-regular-weight);
 }
 
 main {
