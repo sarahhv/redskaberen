@@ -6,7 +6,8 @@ export const state = () => ({
       lineup: false,
       time: '08:30',
       team: 'Dørene åbner for gymnaster og publikum',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 1,
@@ -14,7 +15,8 @@ export const state = () => ({
       lineup: false,
       time: '10:00',
       team: 'FaneIndmarch',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 2,
@@ -23,6 +25,7 @@ export const state = () => ({
       time: '10:15',
       team: 'Vandel Efterskole',
       instructors: 'Christina, Anna, Thomas, Malte, Rasmus og Simon',
+      lineupImg: null,
     },
     {
       id: 3,
@@ -30,7 +33,8 @@ export const state = () => ({
       lineup: false,
       time: '10:45',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 4,
@@ -39,6 +43,7 @@ export const state = () => ({
       time: '10:50',
       team: 'ST70 - Pigetons',
       instructors: 'Mette Caroline, Mia Christiane og Lena',
+      lineupImg: 'one',
     },
     {
       id: 5,
@@ -47,6 +52,7 @@ export const state = () => ({
       time: '10:58',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Mixspring fra 5. kl.',
       instructors: 'Katrine, Signe, Helena og Victor',
+      lineupImg: 'two',
     },
     {
       id: 6,
@@ -55,6 +61,7 @@ export const state = () => ({
       time: '11:06',
       team: 'ST70 - Supergirls',
       instructors: 'Mia Christiane, Mette Caroline og Lena',
+      lineupImg: 'one',
     },
     {
       id: 7,
@@ -63,6 +70,7 @@ export const state = () => ({
       time: '11:12',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Aarhus ShowTeam Junioraspiranter',
       instructors: 'Mille Olivia, Frida, Alberte og Cecilie',
+      lineupImg: 'one',
     },
     {
       id: 8,
@@ -70,7 +78,8 @@ export const state = () => ({
       lineup: false,
       time: '11:20',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: 'one',
     },
     {
       id: 9,
@@ -79,6 +88,7 @@ export const state = () => ({
       time: '11:30',
       team: 'Himmerlandscentrets Idrætsefterskole',
       instructors: 'Christian, Christian, Jacob, Helene og Heidi',
+      lineupImg: 'one',
     },
     {
       id: 10,
@@ -86,7 +96,8 @@ export const state = () => ({
       lineup: false,
       time: '12:00',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: 'one',
     },
     {
       id: 11,
@@ -111,6 +122,7 @@ export const state = () => ({
       time: '12:28',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Aarhus ShowTeam Mini-aspiranter',
       instructors: 'Mille, Kamille, Alberte og Cecilie',
+      lineupImg: 'one',
     },
     {
       id: 14,
@@ -119,6 +131,7 @@ export const state = () => ({
       time: '12:36',
       team: 'Lystrup Idrætsforening - Team Starlight Grand Prix Rytme',
       instructors: 'Caroline, Signe og Sarah',
+      lineupImg: 'one',
     },
     {
       id: 15,
@@ -127,6 +140,7 @@ export const state = () => ({
       time: '12:42',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Aarhus ShowTeam Aspirantholdet',
       instructors: 'Louise, Rikke, Emil, Rasmus, Nikolai, Isabella og Anne',
+      lineupImg: 'one',
     },
     {
       id: 16,
@@ -135,6 +149,7 @@ export const state = () => ({
       time: '12:50',
       team: 'Lystrup Idrætsforening - Team Saturn Grand Prix Rytme',
       instructors: 'Freja, Mathilde og Karla',
+      lineupImg: 'one',
     },
     {
       id: 17,
@@ -143,6 +158,7 @@ export const state = () => ({
       time: '12:56',
       team: 'VIK - Vejlby Idræts Klub - Acro Konkurrencehold',
       instructors: 'Camilla, Mette, Emma og Christine',
+      lineupImg: 'one',
     },
     {
       id: 18,
@@ -150,7 +166,8 @@ export const state = () => ({
       lineup: false,
       time: '13:04',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 19,
@@ -159,6 +176,7 @@ export const state = () => ({
       time: '13:14',
       team: 'Brøruphus Efterskole',
       instructors: 'Christina, Anna, Thomas, Malte, Rasmus og Simon',
+      lineupImg: null,
     },
     {
       id: 20,
@@ -166,7 +184,8 @@ export const state = () => ({
       lineup: false,
       time: '13:44',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 21,
@@ -175,6 +194,7 @@ export const state = () => ({
       time: '13:49',
       team: 'VIK - Vejlby Idræts Klub - Mikropiger 0.-2. kl. og Karateprinsesser 2.-3. kl.',
       instructors: 'Michael, Lene, Sofie, Diana, Hanibal, Mathilde, Anders, Sophia, Victoria og Merete',
+      lineupImg: 'one',
     },
     {
       id: 22,
@@ -183,6 +203,7 @@ export const state = () => ({
       time: '14:04',
       team: 'HEI - Hjortshøj-Egå Idrætsforening - Aarhus ShowTeam Opvisningsholdet (Spring og Rytme)',
       instructors: 'Louise, Rikke, Signe, Bine, Anne Luna, Emil, Rasmus, Theodor, Sam og Rasmus',
+      lineupImg: 'one',
     },
     {
       id: 23,
@@ -191,6 +212,7 @@ export const state = () => ({
       time: '14:19',
       team: 'BMI - Beder-Malling Idrætsforening - Luftens Helte',
       instructors: 'Christian og Lise',
+      lineupImg: 'one',
     },
     {
       id: 24,
@@ -199,6 +221,7 @@ export const state = () => ({
       time: '14:29',
       team: 'VIK - Vejlby Idræts Klub - Tarzan-Jane 5-7 år og Karateprinsesser 2.-5. kl.',
       instructors: 'Emilie, Jacob, Mie, Maja, Mathilde, Caroline og hjælpere',
+      lineupImg: 'one',
     },
     {
       id: 25,
@@ -207,6 +230,7 @@ export const state = () => ({
       time: '14:44',
       team: 'BMI - Beder-Malling Idrætsforening - Mix spring',
       instructors: 'Christian, Lucas, Lea, Josephine, Ulrikke og Jørn',
+      lineupImg: 'one',
     },
     {
       id: 26,
@@ -215,6 +239,7 @@ export const state = () => ({
       time: '14:59',
       team: 'DGI Østjylland - 10-14holdet',
       instructors: 'Laura, Nina, Phillip, Esben, Jørgen, Line, Charlotte, Karina og Denise',
+      lineupImg: 'one',
     },
     {
       id: 27,
@@ -222,7 +247,8 @@ export const state = () => ({
       lineup: false,
       time: '15:29',
       team: 'Pause',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
     {
       id: 28,
@@ -231,6 +257,7 @@ export const state = () => ({
       time: '15:34',
       team: 'Ågård Efterskole',
       instructors: 'Rasmus, Jes, Lise, Maria og Hans',
+      lineupImg: null,
     },
     {
       id: 29,
@@ -238,7 +265,8 @@ export const state = () => ({
       lineup: false,
       time: '16:04',
       team: 'Faneudmarch og tak for i dag',
-      instructors: '',
+      instructors: null,
+      lineupImg: null,
     },
   ],
 });

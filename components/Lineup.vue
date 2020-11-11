@@ -1,17 +1,16 @@
 <template>
   <section class="lineup-container">
     <nuxt-link to="/" class="lineup-container__back">&#10132;</nuxt-link>
-    <!-- Div containing the loop over Lineups -->
-    <div v-for="lineup in lineups" :key="lineup.id">
-      <!-- Div containing the if statement - stating to only show the lineup matching the clicked team  -->
-      <div v-if="$route.params.id == lineup.programId" class="lineup-container__lineup">
-        <!-- Header 1 with title description and the title of the team the line up is for -->
-        <h1 class="lineup-container__lineup__title">
-          Redskabsopstilling for <br />
-          HoldNr {{ $route.params.id }}
-        </h1>
+    <!-- Div containing the loop over the programs -->
+    <div v-for="pl in programLineup" :key="pl.id">
+      <!-- Div containing the if statement - stating to only show the program id matching the clicked team  -->
+      <div v-if="$route.params.id == pl.id" class="lineup-container__lineup">
+        <h1 class="lineup-container__lineup__title">Redskabsopstilling for</h1>
+        <!-- The teamname of the clicked team from the program -->
+        <p class="lineup-container__lineup__team-name">{{ pl.team }}</p>
+        <p>{{ pl.time }}</p>
         <!-- Image of the lineup -->
-        <img :src="require(`../assets/img/${lineup.img}.png`)" :alt="'Lineup' + lineup.id" class="lineup-container__lineup__img" />
+        <img :src="require(`../assets/img/${pl.lineupImg}.png`)" :alt="'Lineup' + pl.team" class="lineup-container__lineup__img" />
       </div>
     </div>
   </section>
@@ -20,8 +19,8 @@
 <script>
 export default {
   computed: {
-    lineups() {
-      return this.$store.state.lineups.lineups;
+    programLineup() {
+      return this.$store.state.program.program;
     },
   },
 };
@@ -39,14 +38,16 @@ export default {
   &__lineup {
     height: 96vh;
     display: flex;
-    flex-flow: wrap;
-    align-items: baseline;
-    justify-content: center;
-    &__title {
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
+    &__team-name {
+      background: white;
+      display: inline-flex;
+      margin: 0 auto;
     }
     &__img {
       width: 100%;
+      margin: auto;
     }
   }
 }
