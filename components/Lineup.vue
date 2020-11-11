@@ -11,7 +11,7 @@
           HoldNr {{ $route.params.id }}
         </h1>
         <!-- Image of the lineup -->
-        <img :src="lineup.img" :alt="'Lineup' + lineup.id" class="lineup-container__lineup__img" />
+        <img :src="require(`../assets/img/${lineup.img}.png`)" :alt="'Lineup' + lineup.id" class="lineup-container__lineup__img" />
       </div>
     </div>
   </section>
