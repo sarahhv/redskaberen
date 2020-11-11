@@ -58,6 +58,7 @@ p {
   }
   &__infos {
     background-color: var(--color-pixie-green);
+    font-weight: var(--base-font-light-weight);
     &:nth-child(odd) {
       background-color: var(--color-willow-brook);
     }
