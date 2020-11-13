@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
+    "dayjs": "^1.9.6",
     "nuxt": "^2.14.6",
     "postcss": "^7.0.32",
     "postcss-calc": "^7.0.4",
