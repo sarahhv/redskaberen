@@ -2,15 +2,15 @@
   <section class="lineup-container">
     <nuxt-link to="/" class="lineup-container__back">&#10132;</nuxt-link>
     <!-- Div containing the loop over the programs -->
-    <div v-for="pl in programLineup" :key="pl.id">
+    <div v-for="lineup in lineups" :key="lineup.id">
       <!-- Div containing the if statement - stating to only show the program id matching the clicked team  -->
-      <div v-if="$route.params.id == pl.id" class="lineups">
+      <div v-if="$route.params.id == lineup.id" class="lineups">
         <h1 class="lineups__title">Redskabsopstilling for</h1>
         <!-- The teamname of the clicked team from the program -->
-        <p class="lineups__program-details">{{ pl.team }}</p>
-        <p class="lineups__program-details">{{ pl.time }}</p>
+        <p class="lineups__program-details">{{ lineup.team }}</p>
+        <p class="lineups__program-details">{{ lineup.time }}</p>
         <!-- Image of the lineup -->
-        <img :src="require(`../assets/img/${pl.lineupImg}.png`)" :alt="'Lineup' + pl.team" class="lineups__img" />
+        <img :src="require(`../assets/img/${lineup.lineupImg}.png`)" :alt="'Lineup' + lineup.team" class="lineups__img" />
       </div>
     </div>
   </section>
@@ -19,8 +19,8 @@
 <script>
 export default {
   computed: {
-    programLineup() {
-      return this.$store.state.program.program;
+    lineups() {
+      return this.$store.state.program.program.shows;
     },
   },
 };

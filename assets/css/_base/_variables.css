@@ -1,8 +1,14 @@
  :root {
     /* Default colors */
+    /* Green program colors - saturdays */
     --color-malachite: #0EB159;
     --color-pixie-green: #aed2ab;
     --color-willow-brook: #dcecdc;
+
+    /* Red program colors - sundays */
+    --color-amaranth: #ee2e53;
+    --color-wewak: #F2ABA3;
+    --color-azalea: #F9DCD7;
   
     /* Typography */
     --base-font-family: 'Open sans', 'Calibri', 'sans-serif';
