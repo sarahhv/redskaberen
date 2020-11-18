@@ -2,7 +2,7 @@
   <section class="program-container">
     <!-- Should be fetched data both h1 and p tag -->
     <h1>Børnedag i Vejlby-Risskov Hallen, Aarhus</h1>
-    <p>Lørdag den 09 marts 2019. Hello! {{ todayDay }} den {{ todayDate }}</p>
+    <p>{{ todayDay }} den {{ todayDate }}</p>
     <!-- Table for the show-program that contains a row with headers and a row with a loop of the programData -->
     <table class="program">
       <thead>
@@ -30,12 +30,13 @@
 </template>
 
 <script>
+require('dayjs/locale/da');
 var dayjs = require('dayjs');
-var today = dayjs(new Date());
+var today = dayjs();
 export default {
   data() {
     return {
-      todayDay: today.format('dddd'),
+      todayDay: today.locale('da').format('dddd'),
       todayDate: today.format('D MMMM YYYY'),
     };
   },
@@ -59,6 +60,7 @@ h1 {
 p {
   padding: 3% 0;
   background-color: white;
+  text-transform: capitalize;
 }
 
 .program {

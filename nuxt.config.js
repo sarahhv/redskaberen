@@ -8,6 +8,9 @@ const postcssCustomProperties = require('postcss-custom-properties');
 export default {
   target: 'server',
   head: {
+    htmlAttrs: {
+      lang: 'da',
+    },
     title: 'redskaberen',
     meta: [
       { charset: 'utf-8' },
