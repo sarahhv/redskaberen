@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 export const state = () => ({
   program: {
     id: 0,
+    title: 'Børnedag i Vejlby-Risskov Hallen, Aarhus',
     date: dayjs('2020-11-21').locale('da').format('D MMMM YYYY'),
     dateDay: dayjs('2020-11-21').locale('da').format('dddd'),
     shows: [
