@@ -1,22 +1,39 @@
 <template>
-  <tbody>
-    <tr
-      v-for="show in shows"
-      :key="show.id"
-      class="program__infos"
-      :class="[{ announcement: show.announcement }, { 'program__infos--sunday': program.dateDay == sunday }]"
-    >
-      <!-- Show time - dansk: Opvisningstiden -->
-      <td class="program__infos__info time">{{ show.time }}</td>
-      <!-- Show team - dansk: Opvisningsholdet -->
-      <td v-if="show.lineup" class="program__infos__info team">
-        <nuxt-link :to="'/lineups/' + show.id" class="program__infos__info__links">{{ show.team }}</nuxt-link>
-      </td>
-      <td v-else class="program__infos__info team">{{ show.team }}</td>
-      <!-- Show team instructors - dansk: Opvisningsholdets instruktører -->
-      <td class="program__infos__info instructors">{{ show.instructors }}</td>
-    </tr>
-  </tbody>
+  <div>
+    <div v-for="program in programs" :key="program.id">
+      <!-- Table for the show-program -->
+      <table v-if="program.dateDay == checkDate" class="program">
+        <!-- Table row with headers -->
+        <thead>
+          <!-- If sunday show add --sunday to class. This will add the red color -->
+          <tr class="program__headers" :class="{ 'program__headers--sunday': program.dateDay == sunday }">
+            <th class="program__headers__header time">Tid</th>
+            <th class="program__headers__header team">Hold</th>
+            <th class="program__headers__header instructors">Instruktører</th>
+          </tr>
+        </thead>
+        <!-- Table row with a loop of the programData from component  ShowsTbody -->
+        <tbody>
+          <tr
+            v-for="show in program.shows"
+            :key="show.id"
+            class="program__infos"
+            :class="[{ announcement: show.announcement }, { 'program__infos--sunday': program.dateDay == sunday }]"
+          >
+            <!-- Show time - dansk: Opvisningstiden -->
+            <td class="program__infos__info time">{{ show.time }}</td>
+            <!-- Show team - dansk: Opvisningsholdet -->
+            <td v-if="show.lineup" class="program__infos__info team">
+              <nuxt-link :to="'/lineups/' + show.id" class="program__infos__info__links">{{ show.team }}</nuxt-link>
+            </td>
+            <td v-else class="program__infos__info team">{{ show.team }}</td>
+            <!-- Show team instructors - dansk: Opvisningsholdets instruktører -->
+            <td class="program__infos__info instructors">{{ show.instructors }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,40 +42,52 @@ var dayjs = require('dayjs');
 export default {
   data() {
     return {
-      today: dayjs(),
-      todayDay: dayjs().locale('da').format('dddd'),
+      /* I've created a chekDate to enable prototyping check. 
+      In the real prototype it would check on the current date,
+      and compare it to the date of the program  */
+      checkDate: dayjs('2020-11-21').locale('da').format('dddd'),
+      /* This checks to see if it's sunday */
       sunday: dayjs().day(0).locale('da').format('dddd'),
     };
   },
   computed: {
-    program() {
+    programs() {
       return this.$store.state.program.program;
-    },
-    shows() {
-      return this.$store.state.program.program.shows;
     },
   },
 };
 </script>
 
 <style>
-.program__infos {
-  background-color: var(--color-pixie-green);
-  font-weight: var(--base-font-light-weight);
-  &:nth-child(even) {
-    background-color: var(--color-willow-brook);
-  }
-  &--sunday {
-    background-color: var(--color-wewak);
-    &:nth-child(even) {
-      background-color: var(--color-azalea);
+.program {
+  &__headers {
+    background-color: var(--color-malachite);
+    &__header {
+      padding: 1%;
+    }
+    &--sunday {
+      background-color: var(--color-amaranth);
     }
   }
-  &__info {
-    padding: 1%;
-    &__links {
-      text-decoration: none;
-      color: black;
+
+  &__infos {
+    background-color: var(--color-pixie-green);
+    font-weight: var(--base-font-light-weight);
+    &:nth-child(even) {
+      background-color: var(--color-willow-brook);
+    }
+    &--sunday {
+      background-color: var(--color-wewak);
+      &:nth-child(even) {
+        background-color: var(--color-azalea);
+      }
+    }
+    &__info {
+      padding: 1%;
+      &__links {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }
