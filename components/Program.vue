@@ -9,7 +9,7 @@
         <p>{{ program.dateDay }} den {{ program.date }}</p>
       </div>
     </div>
-    <ShowsTbody />
+    <ShowsTable />
   </section>
 </template>
 
@@ -39,6 +39,7 @@ export default {
 <style scoped>
 h1 {
   border-bottom: 2px solid black;
+  width: 95%;
 }
 
 p {

@@ -1,7 +1,6 @@
 <template>
   <section class="lineup-container">
-    <!-- Link back to frontpage (Index) -->
-    <nuxt-link to="/" class="lineup-container__back">&#10132;</nuxt-link>
+    <BackButtons />
     <div v-for="program in programs" :key="program.id">
       <div v-if="program.dateDay == checkDate">
         <!-- Div containing the loop over the programs -->
@@ -42,15 +41,6 @@ export default {
 </script>
 
 <style scoped>
-.lineup-container {
-  &__back {
-    transform: rotate(180deg);
-    position: absolute;
-    font-size: 3em;
-    color: black;
-    text-decoration: none;
-  }
-}
 .lineups {
   height: 96vh;
   display: flex;

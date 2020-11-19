@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/svg-sprite": "^0.5.1",
     "core-js": "^3.6.5",
     "dayjs": "^1.9.6",
     "nuxt": "^2.14.6",

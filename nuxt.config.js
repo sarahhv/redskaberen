@@ -23,8 +23,11 @@ export default {
   plugins: [],
   components: true,
   buildModules: [],
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/svg-sprite'],
   axios: {},
+  svgSprite: {
+    input: '~/assets/sprite/svg/',
+  },
   build: {
     postcss: {
       plugins: [
