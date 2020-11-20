@@ -1,17 +1,15 @@
 <template>
-  <div class="login">
-    <h3>Login</h3>
-    <form @submit.prevent="clicked">
-      <div class="login">
-        <input v-model="email" type="text" placeholder="Email" />
-      </div>
-      <div class="password">
-        <input v-model="password" type="password" placeholder="Password" />
-      </div>
-      <button>Login</button>
-    </form>
-    <div v-if="error" class="error">{{ error.message }}</div>
-  </div>
+  <main>
+    <section class="login">
+      <h1>Login</h1>
+      <form class="login__form" @submit.prevent="clicked()">
+        <input v-model="email" type="text" placeholder="Email" class="login__form__input" />
+        <input v-model="password" type="password" placeholder="Password" class="login__form__input" />
+        <button class="login__form__btn">Login</button>
+      </form>
+      <p v-if="error" class="error">{{ error.message }}</p>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -40,4 +38,34 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.login {
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__form {
+    &__input {
+      width: 80%;
+      height: 5vh;
+      margin: 1vh 0;
+      padding: 2%;
+      font-size: 0.8em;
+      border: none;
+      border-radius: 5%;
+      box-shadow: 0px 0px 5px 2px #00000040;
+    }
+    &__btn {
+      width: 50%;
+      padding: 2%;
+      font-size: 0.8em;
+      border-radius: 5%;
+      border: none;
+      background-color: #0eb159;
+      color: white;
+    }
+  }
+}
+</style>

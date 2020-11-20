@@ -1,7 +1,6 @@
 <template>
   <main class="app-content">
     <LoginButton />
-    <nuxt-link to="/association"></nuxt-link>
     <Program />
   </main>
 </template>
@@ -18,7 +17,6 @@ export default {
       checkDate: dayjs('2020-11-21').locale('da').format('dddd'),
       /* This checks to see if it's sunday */
       sunday: dayjs().day(0).locale('da').format('dddd'),
-      loggedIn: true,
     };
   },
   computed: {
