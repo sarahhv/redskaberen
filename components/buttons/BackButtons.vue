@@ -1,8 +1,8 @@
 <template>
   <!-- Link back one page -->
-  <v-btn class="back" @click="to()">
+  <button class="back" @click="to()">
     <svg-icon name="arrow-circle-left-solid" class="back__img" />
-  </v-btn>
+  </button>
 </template>
 
 <script>
