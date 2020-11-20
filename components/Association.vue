@@ -3,25 +3,40 @@
     <nuxt-link to="/">Forsiden</nuxt-link>
     <!-- Background image in a div -->
     <div class="association__background-image"></div>
-    <h1 class="association__header">Hej "foreningsnavn her"</h1>
-    <p>Herunder er oversigten over din forenings hold</p>
-    <div v-for="program in programs" :key="program.id">
-      <ul v-for="show in program.shows" :key="show.id">
-        <!-- List that shows the elements which has the associations name in the team name -->
-        <li v-if="show.team.toLowerCase().includes('hei')" class="association__list">
-          <nuxt-link :to="'/lineups/' + show.id" class="association__list__links"> {{ show.team }}</nuxt-link>
-        </li>
-      </ul>
+    <div v-for="user in users" :key="user.username">
+      <template v-if="user.userEmail == association">
+        <h1 class="association__header">Hej {{ user.username }}</h1>
+        <p>Herunder er oversigten over din forenings hold</p>
+        <div v-for="program in programs" :key="program.id">
+          <ul v-for="show in program.shows" :key="show.id">
+            <!-- List that shows the elements which has the associations name in the team name -->
+            <li v-if="show.team.toLowerCase().includes(user.username)" class="association__list">
+              <nuxt-link v-if="show.lineup" :to="'/lineups/' + show.id" class="association__list__links"> {{ show.team }}</nuxt-link>
+              <p v-else class="association__list__links">{{ show.team }}</p>
+            </li>
+          </ul>
+        </div>
+      </template>
     </div>
   </section>
 </template>
 
 <script>
+import firebase from 'firebase/app';
+import 'firebase/auth';
 export default {
+  data() {
+    return {
+      association: firebase.auth().currentUser.email,
+    };
+  },
   computed: {
     /* Returning the program from program.js */
     programs() {
       return this.$store.state.program.program;
+    },
+    users() {
+      return this.$store.state.program.users;
     },
   },
 };

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import firebase from 'firebase/app';
+/* import firebase from 'firebase/app';
 import 'firebase/auth';
 import { getUserFromCookie } from '@/helpers';
 export default {
@@ -18,14 +18,14 @@ export default {
         redirect('/login');
       }
     } else {
-      console.log('else');
+      console.log('else process.server');
       let user = firebase.auth().currentUser;
       if (!user) {
         redirect('/login');
       }
     }
   },
-};
+}; */
 </script>
 
 <style scoped>
