@@ -1,5 +1,6 @@
 <template>
   <main>
+    <BackButtons />
     <section class="login">
       <h1>Login</h1>
       <form class="login__form" @submit.prevent="clicked()">
@@ -7,7 +8,7 @@
         <input v-model="password" type="password" placeholder="Password" class="login__form__input" />
         <button class="login__form__btn">Login</button>
       </form>
-      <p v-if="error" class="error">{{ error.message }}</p>
+      <p v-if="error" class="login__error">{{ error.message }}</p>
     </section>
   </main>
 </template>
@@ -66,6 +67,9 @@ export default {
       background-color: #0eb159;
       color: white;
     }
+  }
+  &__error {
+    color: red;
   }
 }
 </style>
