@@ -1,6 +1,5 @@
 <template>
   <main class="app-content">
-    <LoginButton />
     <Program />
   </main>
 </template>
