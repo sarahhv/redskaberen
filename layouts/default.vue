@@ -2,6 +2,7 @@
   <div>
     <div v-for="program in programs" :key="program.id">
       <div v-if="program.dateDay == checkDate">
+        <LoginButton />
         <Nuxt :class="{ sunday: program.dateDay == sunday }" />
       </div>
     </div>

@@ -13,8 +13,12 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/svg-sprite": "^0.5.1",
+    "cookie-parser": "^1.4.5",
     "core-js": "^3.6.5",
     "dayjs": "^1.9.6",
+    "firebase": "^8.1.1",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^3.1.2",
     "nuxt": "^2.14.6",
     "postcss": "^7.0.32",
     "postcss-calc": "^7.0.4",

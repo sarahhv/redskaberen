@@ -20,7 +20,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/gymnast.png' }],
   },
   css: [{ src: '~assets/css/_base/_base.css' }, { src: '~assets/css/_base/_mediaqueries.css' }],
-  plugins: [],
+  plugins: ['~/plugins/firebase.js'],
   components: true,
   buildModules: [],
   modules: ['@nuxtjs/axios', '@nuxtjs/svg-sprite'],
