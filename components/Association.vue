@@ -1,6 +1,6 @@
 <template>
   <section class="association">
-    <BackButtons />
+    <LoginButton />
     <!-- Background image in a div -->
     <div class="association__background-image"></div>
     <h1 class="association__header">Hej "foreningsnavn her"</h1>
@@ -17,9 +17,26 @@
 </template>
 
 <script>
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { getUserFromCookie } from '@/helpers';
 require('dayjs/locale/da');
 var dayjs = require('dayjs');
 export default {
+  asyncData({ req, redirect }) {
+    if (process.server) {
+      const user = getUserFromCookie(req);
+      if (!user) {
+        console.log(user);
+        redirect('/login');
+      }
+    } else {
+      let user = firebase.auth().currentUser;
+      if (!user) {
+        redirect('/login');
+      }
+    }
+  },
   data() {
     return {
       /* I've created a chekDate to enable prototyping check. 
