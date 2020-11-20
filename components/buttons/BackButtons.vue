@@ -1,8 +1,8 @@
 <template>
   <!-- Link back one page -->
-  <v-btn class="back" @click="to()">
+  <button class="back" @click="to()">
     <svg-icon name="arrow-circle-left-solid" class="back__img" />
-  </v-btn>
+  </button>
 </template>
 
 <script>
@@ -18,10 +18,13 @@ export default {
 <style>
 .back {
   display: flex;
+  align-items: center;
   position: absolute;
-  width: 7vw;
   left: 3vw;
+  width: 7vw;
   height: 5vh;
+  border: none;
+  background: none;
   &__img {
     background-color: white;
     border-radius: 50%;
