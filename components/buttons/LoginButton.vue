@@ -24,22 +24,21 @@ export default {
   },
   methods: {
     setupFirebase() {
-      /* eslint-disable */
       /* Everytime a user logs in or out this will be fired  */
-      firebase.auth().onAuthStateChanged(user => {
+      firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-          console.log('logged In');
           firebase
             .auth()
             .currentUser.getIdToken(true)
-            .then(token => {
+            .then((token) => {
               Cookies.set('access_token', token);
             });
           this.loggedIn = true;
+          console.log('logged In');
         } else {
           Cookies.remove('access_token');
           this.loggedIn = false;
-          console.log('signed out', 'loggedIn: ' + this.loggedIn)
+          console.log('logged out');
         }
       });
     },
@@ -58,7 +57,7 @@ export default {
 <style scoped>
 .logButton__log-link {
   position: absolute;
-  right: 3vw;
+  right: 7vw;
   width: 8vw;
   height: 10vh;
   color: #b0dce7;
