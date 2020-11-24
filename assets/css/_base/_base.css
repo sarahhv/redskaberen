@@ -15,7 +15,7 @@ main {
     background: url('../../img/stripes.png') var(--color-malachite) no-repeat;
     background-attachment: fixed;
     background-size: 125%;
-    padding: 2vh 3vw;
+    padding: 2vh 3vw 9vh;
 }
 
 section {
