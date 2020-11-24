@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="login">
+    <section class="login-content">
       <h1>Log ind</h1>
       <LoginForm />
     </section>
@@ -8,7 +8,7 @@
 </template>
 
 <style scoped>
-.login {
+.login-content {
   width: 50vw;
   height: 100vh;
   text-align: center;
