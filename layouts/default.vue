@@ -2,8 +2,8 @@
   <div>
     <div v-for="program in programs" :key="program.id">
       <div v-if="program.dateDay == checkDate">
-        <LoginButton />
         <Nuxt :class="{ sunday: program.dateDay == sunday }" />
+        <Nav :class="{ sunday__nav: program.dateDay == sunday }" />
       </div>
     </div>
   </div>
@@ -34,5 +34,8 @@ export default {
 <style scoped>
 .sunday {
   background-color: var(--color-amaranth);
+  &__nav {
+    background-color: var(--color-apricot);
+  }
 }
 </style>

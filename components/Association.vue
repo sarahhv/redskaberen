@@ -1,6 +1,5 @@
 <template>
   <section class="association">
-    <nuxt-link to="/">Forsiden</nuxt-link>
     <!-- Background image in a div -->
     <div class="association__background-image"></div>
     <div v-for="user in users" :key="user.username">
@@ -63,7 +62,7 @@ export default {
     padding: 2%;
     list-style: none;
     background-color: ghostwhite;
-    box-shadow: 0px 0px 12px 9px #00000036;
+    box-shadow: var(--box-shadow);
     &__links {
       color: black;
       text-decoration: none;

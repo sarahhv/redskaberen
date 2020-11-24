@@ -1,12 +1,13 @@
 <template>
-  <aside class="logButton">
-    <nuxt-link v-if="!loggedIn" to="/login" class="logButton__log-link login">
-      <svg-icon name="sign-in-alt-solid" class="logButton__log-link__sprite" />
+  <button class="log-button">
+    <nuxt-link v-if="!loggedIn" to="/login" class="log-button__log-link login link">
+      <svg-icon name="sign-in-alt-solid" class="log-button__log-link__sprite sprite" />
+      Log ind
     </nuxt-link>
-    <nuxt-link v-else to="/" class="logButton__log-link logout">
-      <svg-icon name="sign-out-alt-solid" class="logButton__log-link__sprite" @click="logout()"
-    /></nuxt-link>
-  </aside>
+    <nuxt-link v-else to="/" class="log-button__log-link logout link">
+      <svg-icon name="sign-out-alt-solid" class="log-button__log-link__sprite sprite" @click="logout()" />Log ud</nuxt-link
+    >
+  </button>
 </template>
 
 <script>
@@ -53,25 +54,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.logButton__log-link {
-  position: absolute;
-  right: 7vw;
-  width: 8vw;
-  height: 10vh;
-  color: #b0dce7;
-  &__sprite {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.login {
-  color: var(--color-malachite);
-}
-
-.logout {
-  color: #eb1439;
-}
-</style>

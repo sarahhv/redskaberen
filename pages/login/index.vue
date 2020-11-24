@@ -1,6 +1,5 @@
 <template>
   <main>
-    <BackButtons />
     <section class="login">
       <h1>Login</h1>
       <form class="login__form" @submit.prevent="clicked()">
@@ -56,7 +55,7 @@ export default {
       font-size: 0.8em;
       border: none;
       border-radius: 5%;
-      box-shadow: 0px 0px 5px 2px #00000040;
+      box-shadow: var(--box-shadow);
     }
     &__btn {
       width: 50%;
