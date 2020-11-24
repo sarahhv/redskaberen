@@ -43,7 +43,7 @@ export default {
     },
     /* Returning the users from program.js */
     users() {
-      return this.$store.state.program.users;
+      return this.$store.state.users.users;
     },
   },
 };
