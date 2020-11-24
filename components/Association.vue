@@ -1,16 +1,22 @@
 <template>
   <section class="association">
-    <!-- Background image in a div -->
+    <!-- Background image in a div. I've put it in a div to make i transparent -->
     <div class="association__background-image"></div>
+    <!-- Vue for loop over the users in store -->
     <div v-for="user in users" :key="user.username">
+      <!-- If the userEmail is the same as the association (the email from the logged in user) -->
       <template v-if="user.userEmail == association">
         <h1 class="association__header">Hej {{ user.username }}</h1>
         <p>Herunder er oversigten over din forenings hold</p>
+        <!-- Vue for loop over the programs -->
         <div v-for="program in programs" :key="program.id">
+          <!-- Vue for loop over the shows in the current program -->
           <ul v-for="show in program.shows" :key="show.id">
-            <!-- List that shows the elements which has the associations name in the team name -->
+            <!-- List that shows if the elements has the associations name in the team name -->
             <li v-if="show.team.toLowerCase().includes(user.username)" class="association__list">
+              <!-- Provides a link to the lineups matching the team you click on, if the shows lineup is set to true in the store -->
               <nuxt-link v-if="show.lineup" :to="'/lineups/' + show.id" class="association__list__links"> {{ show.team }}</nuxt-link>
+              <!-- If the lineup is set to false in the store, there will be no link, just plain text -->
               <p v-else class="association__list__links">{{ show.team }}</p>
             </li>
           </ul>
@@ -26,6 +32,7 @@ import 'firebase/auth';
 export default {
   data() {
     return {
+      /* Setting associtaion to the current users email. So the logged in users email */
       association: firebase.auth().currentUser.email,
     };
   },
@@ -34,6 +41,7 @@ export default {
     programs() {
       return this.$store.state.program.program;
     },
+    /* Returning the users from program.js */
     users() {
       return this.$store.state.program.users;
     },

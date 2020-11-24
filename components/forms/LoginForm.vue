@@ -1,10 +1,16 @@
 <template>
   <div>
+    <!-- .prevent prevents the default reload of page when submitted.
+    Instead the clicked method is called -->
     <form class="login-form" @submit.prevent="clicked()">
+      <!-- Input field for the users email -->
       <input v-model="email" type="text" placeholder="Email" class="login-form__input" />
+      <!-- Input field for the users password -->
       <input v-model="password" type="password" placeholder="Password" class="login-form__input" />
+      <!-- Login button -->
       <button class="login-form__btn">Login</button>
     </form>
+    <!-- Error message -->
     <p v-if="error" class="login-error">{{ error.message }}</p>
   </div>
 </template>
@@ -15,6 +21,7 @@ import 'firebase/auth';
 export default {
   data() {
     return {
+      /* All 3 are set to an empty string as default */
       email: '',
       password: '',
       error: '',
@@ -22,11 +29,13 @@ export default {
   },
   methods: {
     clicked() {
+      /* Signin in firebase with the email and password that dynamically changes with the input value */
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then((data) => {
           console.log(data);
+          /* When logged in redirect to the association page */
           this.$router.push('/association');
         })
         .catch((error) => (this.error = error));

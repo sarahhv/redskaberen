@@ -1,8 +1,14 @@
 <template>
   <nav class="navbar">
+    <!-- Buttons from the button folder -->
+    <!-- Back button -->
     <BackButton class="navbar__buttons" />
+    <!-- Button to the program/frontpage -->
     <ProgramButton class="navbar__buttons" />
+    <!-- Button to the association page. 
+    Goes to logIn if you're not logged in -->
     <AssociationButton class="navbar__buttons" />
+    <!-- Button that is either login or logout depending on the user status -->
     <LogButton class="navbar__buttons" />
   </nav>
 </template>

@@ -1,14 +1,16 @@
 <template>
   <section class="program-container">
-    <!-- Looping over the elements in the program array -->
+    <!-- Vue for loop over the elements in the program array in the store -->
     <div v-for="program in programs" :key="program.id">
-      <!-- Checking if the dateDay of the program is the same
-       as the date i'm, checking for -->
+      <!-- Show it the dateDay in the store is equal to the checkDate -->
       <div v-if="program.dateDay == checkDate">
+        <!-- The current dates programs title -->
         <h1>{{ program.title }}</h1>
+        <!-- The current dates programs full date -->
         <p>{{ program.dateDay }} den {{ program.date }}</p>
       </div>
     </div>
+    <!-- The table containing the actual program -->
     <ShowsTable />
   </section>
 </template>

@@ -2,6 +2,7 @@
   <main>
     <section class="login-content">
       <h1>Log ind</h1>
+      <!-- LoginForm component reference -->
       <LoginForm />
     </section>
   </main>
