@@ -1,6 +1,5 @@
 <template>
   <section class="lineup-container">
-    <BackButtons />
     <div v-for="program in programs" :key="program.id">
       <div v-if="program.dateDay == checkDate">
         <!-- Div containing the loop over the programs -->
