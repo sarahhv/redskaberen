@@ -64,6 +64,7 @@ export default {
   }
   &__header {
     text-align: center;
+    text-transform: capitalize;
   }
   &__list {
     margin: 3% 0;
