@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .lineups {
-  height: 96vh;
+  height: 89vh;
   display: flex;
   flex-direction: column;
   text-align: center;
