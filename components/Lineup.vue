@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .lineups {
-  height: 89vh;
+  height: 84vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -57,6 +57,9 @@ export default {
   &__img {
     width: 100%;
     margin: auto;
+    @media (--viewport-ms-max) {
+      max-height: 85vh;
+    }
   }
 }
 </style>

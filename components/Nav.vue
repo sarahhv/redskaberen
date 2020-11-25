@@ -24,6 +24,9 @@
   height: 7vh;
   background-color: var(--color-de-york);
   box-shadow: var(--box-shadow);
+  @media (--viewport-ms-min) and (--viewport-ms-max) {
+    height: 12vh;
+  }
   &__buttons {
     width: 20vw;
     height: 75%;

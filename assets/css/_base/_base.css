@@ -9,7 +9,7 @@ body {
     font-family: var(--base-font-family);
     font-size: var(--base-font-size);
     font-weight: var(--base-font-regular-weight);
-    @media (--viewport-xs-max) {
+    @media (--viewport-ms-max) {
         font-size: 0.9em;
     }
 }
@@ -19,13 +19,17 @@ main {
     background-attachment: fixed;
     background-size: 125%;
     padding: 2vh 3vw 9vh;
+    @media (--viewport-ms-min) and (--viewport-ms-max) {
+        padding-bottom: 14vh;
+    }
 }
 
 section {
     width: 80vw;
     margin: auto;
-    @media (--viewport-xs-max) {
+    @media (--viewport-ms-max) {
         width: 90vw;
+        overflow: overlay;
     }
 }
 

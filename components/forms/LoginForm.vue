@@ -46,6 +46,10 @@ export default {
 
 <style>
 .login-form {
+  @media (--viewport-ms-min) and (--viewport-ms-max) {
+    width: 50%;
+    margin: auto;
+  }
   &__input {
     width: 80%;
     height: 5vh;
@@ -55,6 +59,9 @@ export default {
     border: none;
     border-radius: 5%;
     box-shadow: var(--box-shadow);
+    @media (--viewport-ms-min) and (--viewport-ms-max) {
+      padding: 5%;
+    }
   }
   &__btn {
     width: 50%;
