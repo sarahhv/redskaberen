@@ -1,0 +1,24 @@
+{
+    "eslint.validate": [
+      {
+        "language": "vue",
+        "autoFix": true
+      },
+      {
+        "language": "javascript",
+        "autoFix": true
+      },
+      {
+        "language": "javascriptreact",
+        "autoFix": true
+      }
+    ],
+    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": false,
+    "vetur.validation.template": false,
+    "vetur.experimental.templateInterpolationService": false,
+    "editor.codeActionsOnSave": {
+      // Enable/ Disable autofix
+      "source.fixAll.eslint": false
+    }
+  }
