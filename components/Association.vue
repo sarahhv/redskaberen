@@ -71,6 +71,7 @@ export default {
     list-style: none;
     background-color: ghostwhite;
     box-shadow: var(--box-shadow);
+    border-radius: 5%;
     &__links {
       color: black;
       text-decoration: none;
