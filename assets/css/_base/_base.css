@@ -9,6 +9,9 @@ body {
     font-family: var(--base-font-family);
     font-size: var(--base-font-size);
     font-weight: var(--base-font-regular-weight);
+    @media (--viewport-xs-max) {
+        font-size: 0.9em;
+    }
 }
 
 main {
@@ -21,6 +24,9 @@ main {
 section {
     width: 80vw;
     margin: auto;
+    @media (--viewport-xs-max) {
+        width: 90vw;
+    }
 }
 
 h1 {

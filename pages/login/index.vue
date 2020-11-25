@@ -16,5 +16,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (--viewport-ms-max) {
+    width: 80vw;
+  }
 }
 </style>

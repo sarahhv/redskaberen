@@ -105,11 +105,17 @@ export default {
 
 .time {
   width: 10%;
+  @media (--viewport-xs-max) {
+    width: 14%;
+  }
 }
 
 .team,
 .instructors {
   width: 45%;
+  @media (--viewport-xs-mx) {
+    width: 43%;
+  }
 }
 
 .announcement {

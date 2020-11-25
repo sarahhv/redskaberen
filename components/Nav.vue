@@ -32,6 +32,9 @@
     color: white;
     font-size: 0.7em;
     font-weight: var(--heading-font-weight);
+    @media (--viewport-xs-max) {
+      width: 23vw;
+    }
   }
   .link {
     text-decoration: none;
