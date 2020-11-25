@@ -33,9 +33,6 @@
     font-size: 0.7em;
     font-weight: var(--heading-font-weight);
   }
-  &__buttons:focus {
-    outline: none;
-  }
   .link {
     text-decoration: none;
     color: white;

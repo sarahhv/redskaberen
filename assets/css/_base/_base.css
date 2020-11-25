@@ -27,3 +27,7 @@ h1 {
     font-size: var(--heading-font-size);
     font-weight: var(--heading-font-weight);
 }
+
+button:focus {
+    outline: none;
+}
