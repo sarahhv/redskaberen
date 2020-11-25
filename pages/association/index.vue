@@ -14,7 +14,7 @@ export default {
   asyncData({ req, redirect }) {
     /* If the server is up */
     if (process.server) {
-      console.log('server', req.headers);
+      console.log('server', req);
       const user = getUserFromCookie(req);
       /* If you're not logged in and goes to the association page be redirected to the login page */
       if (!user) {
