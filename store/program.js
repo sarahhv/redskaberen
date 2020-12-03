@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+require('dayjs/locale/da');
 
 export const state = () => ({
   program: [
