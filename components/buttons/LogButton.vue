@@ -1,19 +1,17 @@
 <template>
-  <button class="log-button">
-    <!-- If you're currently not logged in, a login icon will be shown 
-    and you will be redirected to the login page -->
-    <nuxt-link v-if="!loggedIn" to="/login" class="log-button__log-link login link">
-      <svg-icon name="sign-in-alt-solid" class="log-button__log-link__sprite sprite" />
-      Log ind
-    </nuxt-link>
-    <!-- If you're currently logged in, a logout icon will be shown
-    and you will be redirected to the frontpage (programs) -->
-    <nuxt-link v-else to="/" class="log-button__log-link logout link">
-      <!-- When clicking this icon, the method logout is called -->
-      <svg-icon name="sign-out-alt-solid" class="log-button__log-link__sprite sprite" @click="logout()" />
-      Log ud
-    </nuxt-link>
-  </button>
+  <!-- If you're currently not logged in, a login icon will be shown 
+  and you will be redirected to the login page -->
+  <nuxt-link v-if="!loggedIn" to="/login" class="log-button__log-link login link">
+    <svg-icon name="sign-in-alt-solid" class="log-button__log-link__sprite sprite" />
+    Log ind
+  </nuxt-link>
+  <!-- If you're currently logged in, a logout icon will be shown
+  and you will be redirected to the frontpage (programs) -->
+  <nuxt-link v-else to="/" class="log-button__log-link logout link">
+    <!-- When clicking this icon, the method logout is called -->
+    <svg-icon name="sign-out-alt-solid" class="log-button__log-link__sprite sprite" @click="logout()" />
+    Log ud
+  </nuxt-link>
 </template>
 
 <script>

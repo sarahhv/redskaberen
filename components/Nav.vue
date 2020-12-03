@@ -32,6 +32,7 @@
     height: 75%;
     background-color: transparent;
     border: none;
+    text-align: center;
     color: white;
     font-size: 0.7em;
     font-weight: var(--heading-font-weight);

@@ -1,10 +1,8 @@
 <template>
-  <button class="program-button">
-    <!-- Link to the frontpage/program page -->
-    <nuxt-link to="/" class="program-button__link link">
-      <!-- Program icon -->
-      <svg-icon name="th-list-solid" class="program-button__link__sprite sprite" />
-    </nuxt-link>
+  <!-- Link to the frontpage/program page -->
+  <nuxt-link to="/" class="program-button__link link">
+    <!-- Program icon -->
+    <svg-icon name="th-list-solid" class="program-button__link__sprite sprite" />
     Programmet
-  </button>
+  </nuxt-link>
 </template>

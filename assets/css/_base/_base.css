@@ -29,7 +29,6 @@ section {
     margin: auto;
     @media (--viewport-ms-max) {
         width: 90vw;
-        overflow: overlay;
     }
 }
 
