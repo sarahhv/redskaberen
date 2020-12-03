@@ -3,7 +3,7 @@
     <!-- Vue for loop over the programs in the store -->
     <div v-for="program in programs" :key="program.id">
       <!-- Show if the dateDay in the store is equal to the checkdate -->
-      <div v-if="program.dateDay == checkDate">
+      <div v-if="program.dateDay == checkDate.date">
         <!-- Vue for loop over the lineups in the program show from the store -->
         <div v-for="lineup in program.shows" :key="lineup.id">
           <!-- Show if the program id matches the clicked team  -->
@@ -23,18 +23,12 @@
 </template>
 
 <script>
-require('dayjs/locale/da');
-var dayjs = require('dayjs');
 export default {
-  data() {
-    return {
-      /* I've created a chekDate to enable prototyping check. 
-      In the real prototype it would check on the current date,
-      and compare it to the date of the program  */
-      checkDate: dayjs('2020-11-21').locale('da').format('dddd'),
-    };
-  },
   computed: {
+    /* Returning the checkDate from index.js */
+    checkDate() {
+      return this.$store.state.checkDate;
+    },
     /* Returning the program from program.js */
     programs() {
       return this.$store.state.program.program;

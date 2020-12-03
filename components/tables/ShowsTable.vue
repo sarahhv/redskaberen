@@ -4,12 +4,12 @@
     <div v-for="program in programs" :key="program.id">
       <!-- Table for the show-program. 
       Is only shown if the programs date is equal to the checkDate I've made -->
-      <table v-if="program.dateDay == checkDate" class="program">
+      <table v-if="program.dateDay == checkDate.date" class="program">
         <!-- Table headers -->
         <thead>
           <!-- If the stores dateDay is sunday add --sunday to class. 
           This will add the red color -->
-          <tr class="program__headers" :class="{ 'program__headers--sunday': program.dateDay == sunday }">
+          <tr class="program__headers" :class="{ 'program__headers--sunday': program.dateDay == checkDate.sunday }">
             <th class="program__headers__header time">Tid</th>
             <th class="program__headers__header team">Hold</th>
             <th class="program__headers__header instructors">Instruktører</th>
@@ -24,7 +24,7 @@
             v-for="show in program.shows"
             :key="show.id"
             class="program__infos"
-            :class="[{ announcement: show.announcement }, { 'program__infos--sunday': program.dateDay == sunday }]"
+            :class="[{ announcement: show.announcement }, { 'program__infos--sunday': program.dateDay == checkDate.sunday }]"
           >
             <!-- Show time - dansk: Opvisningstiden -->
             <td class="program__infos__info time">{{ show.time }}</td>
@@ -45,20 +45,12 @@
 </template>
 
 <script>
-require('dayjs/locale/da');
-var dayjs = require('dayjs');
 export default {
-  data() {
-    return {
-      /* I've created a chekDate to enable prototyping check. 
-      In the real prototype it would check on the current date,
-      and compare it to the date of the program  */
-      checkDate: dayjs('2020-11-21').locale('da').format('dddd'),
-      /* This checks to see if it's sunday */
-      sunday: dayjs().day(0).locale('da').format('dddd'),
-    };
-  },
   computed: {
+    /* Returning the checkDate from index.js */
+    checkDate() {
+      return this.$store.state.checkDate;
+    },
     /* Returning the program from program.js */
     programs() {
       return this.$store.state.program.program;

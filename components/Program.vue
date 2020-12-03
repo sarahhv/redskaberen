@@ -3,7 +3,7 @@
     <!-- Vue for loop over the elements in the program array in the store -->
     <div v-for="program in programs" :key="program.id">
       <!-- Show it the dateDay in the store is equal to the checkDate -->
-      <div v-if="program.dateDay == checkDate">
+      <div v-if="program.dateDay == checkDate.date">
         <!-- The current dates programs title -->
         <h1>{{ program.title }}</h1>
         <!-- The current dates programs full date -->
@@ -16,20 +16,12 @@
 </template>
 
 <script>
-require('dayjs/locale/da');
-var dayjs = require('dayjs');
 export default {
-  data() {
-    return {
-      /* I've created a chekDate to enable prototyping check. 
-      In the real prototype it would check on the current date,
-      and compare it to the date of the program  */
-      checkDate: dayjs('2020-11-21').locale('da').format('dddd'),
-      /* This checks to see if it's sunday */
-      sunday: dayjs().day(0).locale('da').format('dddd'),
-    };
-  },
   computed: {
+    /* Returning the checkDate from index.js */
+    checkDate() {
+      return this.$store.state.checkDate;
+    },
     /* Returning the program from program.js */
     programs() {
       return this.$store.state.program.program;
